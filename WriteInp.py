@@ -21,7 +21,7 @@ def write_pack_inp():
         fp.write('add_box_sides ' + str(boxSideMargin) + '\n\n')
         fp.write('structure ' + str(newName) + '.pdb\n')
         fp.write('\t number ' + str(molNumber) + '\n')
-        fp.write('\t inside box 0. 0. 0.' + (str(boxLengthX)+'')*3 + '\n')
+        fp.write('\t inside box 0. 0. 0. ' + (str(boxLengthX)+' ')*3 + '\n')
         fp.write('end structure\n')
 
 # main
