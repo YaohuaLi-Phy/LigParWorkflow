@@ -1,18 +1,18 @@
 #!/usr/bin/env python
 import argparse
 
-gen_code = 'UNK_C4C273'
+genCode = 'UNK_C4C273'
 parser=argparse.ArgumentParser()
 parser.add_argument('fn',type=str)
 args = parser.parse_args()
-mol_code = args.fn
+molCode = args.fn
 tail = '.itp'
-fp = open(mol_code + tail, 'r')
+fp = open(molCode + tail, 'r')
 
 stored = []
 sectionMark = False
 def read_file_from():
-    with open(mol_code + tail, 'r') as fp:
+    with open(molCode + tail, 'r') as fp:
         for line_idx, line in enumerate(fp):
             if not line.strip(): # if meet empty lines
                 continue
