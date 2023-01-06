@@ -1,7 +1,7 @@
 tolerance 2.0
 filetype pdb
 output box.pdb
-add_box_sides1.1
+add_box_sides 1.1
 
 structure SiN3.pdb
 	 number 400

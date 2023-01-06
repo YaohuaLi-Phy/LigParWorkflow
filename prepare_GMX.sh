@@ -5,6 +5,8 @@ newName="SiN3"
 
 python CutForcefield.py $molCode
 python RenameResidue.py $molCode
-python WriteInp.py ${newName}.pdb
+python WriteInp.py ${newName}
 mv ${molCode}.pdb ${newName}.pdb
 mv ${molCode}.itp ${newName}.itp
+
+packmol < pack_test.inp
