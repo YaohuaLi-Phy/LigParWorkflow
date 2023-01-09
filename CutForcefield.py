@@ -28,7 +28,6 @@ def read_file_from():
                 sectionMark = True
             if linelist[0:5] == list('[ mol'):
                 sectionMark = False
-                stored.append(line)
                 print('section ended')
             if sectionMark:
                 stored.append(line)
