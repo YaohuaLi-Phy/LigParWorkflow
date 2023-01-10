@@ -1,0 +1,7 @@
+[ moleculetype ]
+; name       nrexcl
+li                3
+
+[ atoms ]
+;  nr   type  resnr  residu   atom   cgnr    charge
+    1   Li        1  li       Li        1    0.8000

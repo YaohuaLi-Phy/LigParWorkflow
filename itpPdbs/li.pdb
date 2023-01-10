@@ -1,0 +1,7 @@
+TITLE     li il.ff
+REMARK    THIS IS A SIMULATION BOX
+CRYST1   13.000   13.000   13.000  90.00  90.00  90.00 P 1           1
+MODEL        1
+HETATM    1 Li           0       6.500   6.500   6.500  1.00  0.00          Li
+TER
+ENDMDL
