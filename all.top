@@ -1,0 +1,14 @@
+#include "./oplsaa-modif.ff/forcefield.itp"
+#include "./atp.itp"
+#include "./CN3.itp"
+#include "./li.itp"
+#include "./pf6-.itp"
+
+[ system ]
+; Name 
+Box1
+
+[ molecules ]
+CN3	400
+li	20
+pf6-	20
