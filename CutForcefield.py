@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 import argparse
 
-genCode = 'UNK_C4C273'
+
 parser=argparse.ArgumentParser()
 parser.add_argument('fn',type=str)
 args = parser.parse_args()

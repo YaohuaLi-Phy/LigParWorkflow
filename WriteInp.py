@@ -2,19 +2,14 @@
 # command line input:  a list of Names of the molecules in the box
 import argparse
 
-parser=argparse.ArgumentParser()
-parser.add_argument('-l','--list', nargs='+', help='<Required> Set flag', required=True)
-args = parser.parse_args()
-namelist = args._get_kwargs()[0][1]
-
-print(namelist)
-def write_pack_inp():
-    # parameters
+def write_pack_inp(molNumber, namelist):
+    # parameters: molNumber: list of number of each molecule in "namelist"
     tolerance = 2.0
     boxSideMargin = 1.1  # Angstrom
-    molNumber = [400, 20, 20]
-    boxLengthX = 60
-    
+    molNumber = molNumber
+    boxLengthX = 50
+    print("open file")
+    print(str(namelist))
     with open('pack_test.inp', 'w') as fp:
         fp.write('tolerance ' + str(tolerance) + '\n')
         fp.write('filetype pdb\n')
@@ -29,4 +24,13 @@ def write_pack_inp():
 
 
 # main
-write_pack_inp()
+if __name__ == "__main__":
+    parser=argparse.ArgumentParser()
+    parser.add_argument('-l','--list', nargs='+', help='<Required> Set flag', required=True)
+    args = parser.parse_args()
+    namelist = args._get_kwargs()[0][1]
+    #molNumber = calc_conc()
+    molNumber = [272, 76, 76]
+    print(namelist)
+
+    write_pack_inp(molNumber, namelist)

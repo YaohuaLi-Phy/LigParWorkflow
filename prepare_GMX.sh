@@ -1,12 +1,16 @@
 #!/bin/bash
 
-molCode="UNK_D556B1"
-newName="CH5"
+molCode="UNK_C4C273"
+newName="CN3"
 name2="li"
 name3="pf6-"
 
-python CutForcefield.py $molCode
-python RenameResidue.py -l $molCode $newName
+
+#python CutForcefield.py $molCode
+#python RenameResidue.py -l $molCode $newName
+
+#python main.py -l $newName $name2 $name3
+ # change to main.py
 python WriteInp.py -l ${newName} $name2 $name3
 python WriteAllTop.py -l ${newName} $name2 $name3
 mv ${molCode}.pdb ${newName}.pdb

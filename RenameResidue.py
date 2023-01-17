@@ -2,7 +2,7 @@
 import argparse
 # rename the residue name in PDB from UNK to the desired new name
 
-genCode = 'UNK_C4C273'
+#genCode = 'UNK_C4C273'
 newName = 'SN3'  # 3 letter-number combination recommended
 parser=argparse.ArgumentParser()
 parser.add_argument('-l','--list', nargs='+', help='<Required> Set flag', required=True)

@@ -9,7 +9,7 @@ namelist = args._get_kwargs()[0][1]
 
 def write_all_top():
     # parameters
-    molNumber = [400, 20, 20]  # write as class
+    molNumber = [272, 76, 76]  # write as class
 
     with open('all.top', 'w') as fp:
         fp.write('#include "./oplsaa-modif.ff/forcefield.itp"\n')
@@ -25,5 +25,7 @@ def write_all_top():
         for idx, name in enumerate(namelist):
             fp.write(str(name)+'\t' + str(molNumber[idx]) + '\n')
 
+if __name__ == "__main__":
 
-write_all_top()
+    write_all_top()
+    print("\n  all.top written\n")
