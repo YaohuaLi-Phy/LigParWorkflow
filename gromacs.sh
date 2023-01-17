@@ -10,7 +10,7 @@
 cd $SLURM_SUBMIT_DIR
 
 module add GROMACS/2019.6-intel-2019b  
-gmx grompp  -f em.mdp  -c box.gro -p all.top -o em.tpr -maxwarn 37
+gmx grompp  -f em.mdp  -c box.pdb -p all.top -o em.tpr -maxwarn 37
 mpiexec -v gmx_mpi mdrun -v -deffnm em
 gmx grompp  -f nvt.mdp  -c em.gro  -p all.top -o nvt.tpr -maxwarn 37
 mpiexec -v gmx_mpi mdrun -v -deffnm nvt
