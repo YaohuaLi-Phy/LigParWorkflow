@@ -3,13 +3,13 @@ import sys
 import argparse
 import math
 import numpy as np
-from WriteInp import  write_pack_inp
-from CalcConc import calc_conc
+from WriteInp import write_pack_inp
+from WriteAllTop import write_all_top
+from CalculateConcentration import calc_conc
 
-
-#molNumber = calc_conc()
-molNumber = [400, 20, 20]
 # define cross-functional constants
+#molNumber = calc_conc()
+
 concMain = 0.8
 saltMain = 'pf6-'
 
@@ -18,7 +18,8 @@ class SimulationSystem(object):
         self.newName = 'SN3' # name of the new forcefield molecule
         self.salt = salt
         self.additionalComponents = namelist  # list of name of additives
-        self.boxLengthX = 50  # Angstrom
+        self.boxLengthX = 55  # Angstrom
+
     def print_info(self):
         print(self.salt)
         print(self.additionalComponents)
@@ -32,11 +33,14 @@ if __name__ == '__main__':
     molCode = args._get_kwargs()[0][1][0]
     newName = args._get_kwargs()[0][1][1]
     namelist = args._get_kwargs()[0][1]
-    numberList = [400, 20, 20]
-    #numberList = calc_conc() # todo: pass parameters
+    #numberList = [400, 20, 20]
+    numberList = calc_conc() # todo: pass parameters
+    write_pack_inp(numberList, namelist)
+    write_all_top(numberList)
+    print(numberList)
 
-    sys = SimulationSystem(saltMain, concMain, namelist)
-    sys.print_info()
+    #sys = SimulationSystem(saltMain, concMain, namelist)
+    #sys.print_info()
 
     # write packmol input file
     write_pack_inp(numberList, namelist)

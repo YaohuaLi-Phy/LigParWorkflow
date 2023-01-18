@@ -30,7 +30,7 @@ if __name__ == "__main__":
     args = parser.parse_args()
     namelist = args._get_kwargs()[0][1]
     #molNumber = calc_conc()
-    molNumber = [272, 76, 76]
+    molNumber = [279, 60, 75, 15]
     print(namelist)
 
     write_pack_inp(molNumber, namelist)

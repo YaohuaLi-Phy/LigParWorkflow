@@ -7,13 +7,13 @@ parser.add_argument('-l','--list', nargs='+', help='<Required> Set flag', requir
 args = parser.parse_args()
 namelist = args._get_kwargs()[0][1]
 
-def write_all_top():
+def write_all_top(molNumber):
     # parameters
-    molNumber = [272, 76, 76]  # write as class
 
     with open('all.top', 'w') as fp:
         fp.write('#include "./oplsaa-modif.ff/forcefield.itp"\n')
         fp.write('#include "./atp.itp"\n')
+        #fp.write('#include "./dfob-.itp"\n')
 
         for name in namelist:
             fp.write('#include "./' + str(name) + '.itp' + '"\n')
