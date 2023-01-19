@@ -20,7 +20,7 @@ def calc_conc():
     numSol = vol *  solventConc * N_Av
     numSaltMain = concMain * vol * N_Av
     numSaltLi = concLi * vol * N_Av
-    outputList = ([int(numSol), round(numSaltMain), round(numSaltLi)])
+    outputList = ([int(numSol), round(numSaltLi), round(numSaltMain)])
     outputList += [round(conc * vol * N_Av) for conc in additionalComponents]
     return outputList
 
