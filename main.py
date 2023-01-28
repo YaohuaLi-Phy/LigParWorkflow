@@ -10,8 +10,6 @@ from CalculateConcentration import calc_conc
 # define cross-functional constants
 #molNumber = calc_conc()
 
-concMain = 0.8
-saltMain = 'pf6-'
 
 class SimulationSystem(object):
     def __init__(self, salt, conc, namelist):

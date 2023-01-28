@@ -8,7 +8,7 @@ def calc_conc():
     """
     # components: solvent, LiPF6 0.8M, additional: dfob- 0.2M
 
-    concMain = 0.7  # concentration of main salt in mol/L
+    concMain = 0.85  # concentration of main salt in mol/L
     concLi = 1.0 # concentration of secondary salt
     solventDensity = 820 # estimated molar density of main solvent
     solventMW = 221
@@ -16,7 +16,7 @@ def calc_conc():
     boxLengthX = 50 # in Angstrom
     N_Av = 0.602  # Avgadro's constant
     vol = boxLengthX ** 3 / 1000 # nm3
-    addSaltConc = [0.3]
+    addSaltConc = [0.1, 0.05]
     numAddSalt = [round(conc * vol * N_Av) for conc in addSaltConc]
     additiveConc = [] # concontration of aditives, will round up in actual calculation
     numAddComponents = [round(conc * vol * N_Av) for conc in additiveConc]
